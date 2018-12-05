@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { createAction } from './actions';
-import {connect} from 'react-redux';
+import { createAction, resetAction } from './actions';
+import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
   return {
@@ -13,7 +13,10 @@ class App extends Component {
 
   handleButtonClick = (e) => {
     const amount = e.target.name;
-    this.props.dispatch(createAction(amount));
+    if (amount !== 'reset')
+      this.props.dispatch(createAction(amount));
+    else
+      this.props.dispatch(resetAction(amount));
   }
 
   render() {
@@ -28,6 +31,7 @@ class App extends Component {
         </div>
         <button onClick={this.handleButtonClick} name="300">Withdraw Rs.300</button>
         <button onClick={this.handleButtonClick} name="500">Withdraw Rs.500</button>
+        <button onClick={this.handleButtonClick} name="reset">Reset</button>
       </div>
     );
   }

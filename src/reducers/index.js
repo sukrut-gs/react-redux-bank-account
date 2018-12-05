@@ -10,6 +10,8 @@ const bankReducer = (state, action) => {
                 oldState.message = 'Not enough balance...';
             }
             return oldState;
+        case 'RESET':
+            return {...state, balance: 500, message: ''}
         default:
             return state;
     }

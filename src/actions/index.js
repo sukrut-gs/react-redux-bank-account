@@ -6,3 +6,9 @@ export const createAction = (amount) => {
         }
     };
 }
+
+export const resetAction = () => {
+    return {
+        type: 'RESET'
+    };
+}
