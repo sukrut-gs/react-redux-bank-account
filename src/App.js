@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { store } from './store';
 import { createAction } from './actions';
 import {connect} from 'react-redux';
 
