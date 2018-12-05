@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 import reducer from '../reducers';
 
 const initialState = {
-    balance: 500,
+    balance: 1000,
     message: ''
 };
 

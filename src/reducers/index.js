@@ -11,7 +11,7 @@ const bankReducer = (state, action) => {
             }
             return oldState;
         case 'RESET':
-            return {...state, balance: 500, message: ''}
+            return {...state, balance: 1000, message: ''}
         default:
             return state;
     }
